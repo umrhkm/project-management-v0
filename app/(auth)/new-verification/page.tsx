@@ -1,7 +1,6 @@
 import NewVerificationForm from "@/components/auth/NewVerificationForm";
 import Card from "@/components/shared/Card";
 import React, { Suspense } from "react";
-import { Loading } from "../loading";
 
 const NewVerificationPage = () => {
   return (
@@ -13,7 +12,7 @@ const NewVerificationPage = () => {
       buttonLabel="LOGIN"
       buttonLink
     >
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<p>Loading...</p>}>
         <NewVerificationForm />
       </Suspense>
     </Card>

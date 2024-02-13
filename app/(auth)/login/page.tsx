@@ -2,7 +2,6 @@ import AuthProviders from "@/components/auth/AuthProviders";
 import LoginForm from "@/components/auth/LoginForm";
 import Card from "@/components/shared/Card";
 import { Suspense } from "react";
-import { Loading } from "../loading";
 
 const RegisterPage = () => {
   return (
@@ -17,7 +16,7 @@ const RegisterPage = () => {
         footerButtonLabel="Daftar Akun"
         footerHref="/register"
       >
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<p>Loading...</p>}>
           <AuthProviders />
         </Suspense>
 
@@ -26,7 +25,7 @@ const RegisterPage = () => {
           <span className="text-secondary">atau</span>
           <div className="bg-secondary/25 h-0.5 w-full rounded-full" />
         </div>
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<p>Loading...</p>}>
           <LoginForm />
         </Suspense>
       </Card>

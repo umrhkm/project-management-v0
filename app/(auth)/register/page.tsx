@@ -2,7 +2,6 @@ import AuthProviders from "@/components/auth/AuthProviders";
 import RegisterForm from "@/components/auth/RegisterForm";
 import Card from "@/components/shared/Card";
 import { Suspense } from "react";
-import { Loading } from "../loading";
 
 const RegisterPage = () => {
   return (
@@ -17,7 +16,7 @@ const RegisterPage = () => {
         footerButtonLabel="Masuk"
         footerHref="/login"
       >
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<p>Loading...</p>}>
           <AuthProviders />
         </Suspense>
 

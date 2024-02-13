@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import Pagination from "./Pagination";
 import ProjectCard from "./ProjectCard";
+import { Loading } from "@/app/loading";
 
 type CollectionProps = {
   data: {
@@ -42,11 +44,13 @@ const ProjectCollection = ({
           </ul>
 
           {totalPages > 1 && (
-            <Pagination
-              urlParamName={urlParamName!}
-              page={page}
-              totalPages={totalPages}
-            />
+            <Suspense fallback={<Loading />}>
+              <Pagination
+                urlParamName={urlParamName!}
+                page={page}
+                totalPages={totalPages}
+              />
+            </Suspense>
           )}
         </div>
       ) : (

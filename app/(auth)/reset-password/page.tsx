@@ -1,6 +1,7 @@
 import ResetPasswordForm from "@/components/auth/ResetPasswordForm";
 import Card from "@/components/shared/Card";
-import React from "react";
+import React, { Suspense } from "react";
+import { Loading } from "../loading";
 
 const ResetPasswordPage = () => {
   return (
@@ -9,7 +10,9 @@ const ResetPasswordPage = () => {
       description="Tuliskan kata sandi baru untuk mereset kata sandi anda"
       button={false}
     >
-      <ResetPasswordForm />
+      <Suspense fallback={<Loading />}>
+        <ResetPasswordForm />
+      </Suspense>
     </Card>
   );
 };

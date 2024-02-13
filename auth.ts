@@ -8,7 +8,7 @@ import { UserRole } from "@prisma/client";
 declare module "next-auth" {
   interface User {
     role: "ADMIN" | "USER";
-    username: string;
+    username: string | null;
   }
 }
 

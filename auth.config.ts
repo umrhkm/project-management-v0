@@ -1,10 +1,10 @@
+import bcrypt from "bcryptjs";
 import type { NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
+import Github from "next-auth/providers/github";
+import Google from "next-auth/providers/google";
 import { LoginSchema } from "./lib/validators";
 import { getUserByEmail } from "./lib/data-access/user";
-import bcrypt from "bcryptjs";
-import GitHub from "next-auth/providers/github";
-import Google from "next-auth/providers/google";
 
 export default {
   providers: [
@@ -12,7 +12,7 @@ export default {
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
-    GitHub({
+    Github({
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),

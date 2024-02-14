@@ -39,7 +39,7 @@ const UpdateProjectPage = async ({ params: { id } }: UpdateProjectProps) => {
         </div>
       </section>
 
-      <div className="wrapper my-8">
+      <div className="max-w-7xl lg:mx-auto mb-12 md:px-10 xl:px-0 w-full">
         <ProjectForm
           userId={userId}
           type="Update"

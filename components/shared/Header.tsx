@@ -14,7 +14,7 @@ const Header = () => {
     <header className="w-full border-b">
       <div className="wrapper flex items-center justify-between">
         <Link href={`/`}>
-          <Image src={"/logo.png"} alt="logo" width={40} height={40} />
+          <Image src={"/assets/images/KelolaProyek.png"} alt="logo" width={48} height={48} />
         </Link>
 
         <div className="flex items-center justify-center">

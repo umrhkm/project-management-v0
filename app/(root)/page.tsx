@@ -10,7 +10,7 @@ const HomePage = async () => {
       <div className="wrapper text-center flex flex-col items-center justify-center gap-10">
         <div className="flex flex-col gap-5 items-center justify-center">
           <h1 className="font-bold text-4xl tracking-wider mt-32 text-gold">
-            PROJECT MANAGEMENT SYSTEM
+            SISTEM PENGELOLA PROYEK
           </h1>
           <p className="font-light text-secondary max-w-[600px] text-center tracking-wide">
             Kelola proyek anda dengan dasbor dan antarmuka pengguna yang mudah

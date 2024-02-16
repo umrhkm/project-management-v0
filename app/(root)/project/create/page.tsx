@@ -30,7 +30,7 @@ const CreateProjectPage = async () => {
         </div>
       </section>
 
-      <div className="max-w-7xl lg:mx-auto mb-12 md:px-10 xl:px-0 w-full ">
+      <div className="max-w-7xl lg:mx-auto mb-12 md:px-10 xl:px-0 w-full">
         <ProjectForm userId={userId!} type="Create" />
       </div>
     </>
